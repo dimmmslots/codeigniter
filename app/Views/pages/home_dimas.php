@@ -4,7 +4,8 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Selamat Datang</h1>
+      <h1>Tugas 6 </h1>
+      <h4 class="text-muted">Pemrograman Web II</h4>
     </div>
   </div>
 </div>
