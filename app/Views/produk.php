@@ -1,6 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
 <div class="container">
+<!-- <a href="/produk/input" class="btn btn-primary">Input Data</a> -->
     <div class="row">
         <div class="col">
             <table class="table">

@@ -9,7 +9,8 @@
       <ul class="navbar-nav">
         <a class="nav-link <?= $navState[0];?>" aria-current="page" href="/pages/">Home</a>
         <a class="nav-link <?= $navState[1];?>" href="/pages/about">About</a>
-        <a class="nav-link <?= $navState[2];?>" href="/kegiatandimas">Kegiatan</a>
+        <a class="nav-link <?= $navState[2];?>" href="/produk">Produk</a>
+        <a class="nav-link <?= $navState[3];?>" href="/produk/input">Input Produk</a>
       </ul>
     </div>
   </div>

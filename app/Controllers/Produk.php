@@ -10,7 +10,7 @@ class Produk extends BaseController
         $produk = $produkmodel->findAll();
         $data = [
             'title' => 'produk',
-            'navState' => ['','','active'],
+            'navState' => ['','','active',''],
             'produk' => $produk
         ];
 
@@ -23,10 +23,33 @@ class Produk extends BaseController
         $detail = $produkmodel->where(['kode' => $kode])->first();
         $data = [
             'title' => 'Detail',
-            'navState' => ['','','active'],
+            'navState' => ['','','active',''],
             'detail' => $detail,
         ];
 
         return view('pages/detail',$data);
+    }
+
+    public function input()
+    {
+        $data = [
+            'title' => 'Input Produk',
+            'navState' => ['','','','active'],
+        ];
+        return view('pages/input',$data);
+    }
+
+    public function simpan()
+    {
+        $produkmodel = new \App\Models\ProdukModel();
+        $data = [
+            'kode' => $this->request->getVar('kode'),
+            'nama' => $this->request->getVar('nama'),
+            'harga' => $this->request->getVar('harga'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
+            'gambar' => $this->request->getVar('gambar')
+        ];
+        $produkmodel->insert($data);
+        return redirect()->to('/produk');
     }
 }
