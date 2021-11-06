@@ -7,6 +7,8 @@ use CodeIgniter\Model;
 class ProdukModel extends Model {
     protected $table = 'produk';
     protected $primary_key = 'kode';
+
+    protected $useAutoIncrement = true;
 }
 
 ?>

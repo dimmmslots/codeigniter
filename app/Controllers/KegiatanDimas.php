@@ -30,5 +30,11 @@ class KegiatanDimas extends BaseController
     public function save()
     {
         $kegiatanmodel = new \App\Models\KegiatanModel_dimas();
+        $data = [
+            'nama_kegiatan' => $this->request->getVar('nama'),
+            'poin' => $this->request->getVar('poin'),
+        ];
+        $kegiatanmodel->insert($data);
+        return redirect()->to('/kegiatandimas');
     }
 }
