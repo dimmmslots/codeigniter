@@ -16,4 +16,14 @@ class KegiatanDimas extends BaseController
 
         return view('pages/kegiatan_dimas',$data);
     }
+
+    public function input()
+    {
+        $data = [
+            'title' => 'Input Kegiatan',
+            'navState' => ['','','','active'] 
+        ];
+
+        return view('pages/input',$data);
+    }
 }
