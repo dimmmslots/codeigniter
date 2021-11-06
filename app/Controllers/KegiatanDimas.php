@@ -10,7 +10,7 @@ class KegiatanDimas extends BaseController
         $kegiatan = $kegiatanmodel->findAll();
         $data = [
             'title' => 'Kegiatan',
-            'navState' => ['','','active'],
+            'navState' => ['','','active',''],
             'kegiatan' => $kegiatan,
         ];
 
@@ -24,6 +24,11 @@ class KegiatanDimas extends BaseController
             'navState' => ['','','','active'] 
         ];
 
-        return view('pages/input',$data);
+        return view('pages/input_dimas',$data);
+    }
+
+    public function save()
+    {
+        $kegiatanmodel = new \App\Models\KegiatanModel_dimas();
     }
 }

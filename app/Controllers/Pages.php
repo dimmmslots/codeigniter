@@ -8,7 +8,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Home',
-            'navState' => ['active','',''],
+            'navState' => ['active','','','',''],
         ];
         echo view('pages/home_dimas',$data);
     }
@@ -17,7 +17,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'About',
-            'navState' => ['','active',''],
+            'navState' => ['','active','',''],
         ];
         echo view('pages/about_dimas',$data);
     }
